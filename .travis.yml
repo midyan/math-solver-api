@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "7"
+
+#Install dependencies script
+script: npm install
+
+#Test script
+script: npm test

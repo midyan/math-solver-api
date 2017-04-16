@@ -1,0 +1,31 @@
+{
+  "name": "math-solver-api",
+  "version": "1.0.0",
+  "description": "Upload a picture of a mathemetical equation. Get result as response. Magical!",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha tests/tests.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midyan/math-solver-api.git"
+  },
+  "keywords": [
+    "math",
+    "wolfram",
+    "api",
+    "solve",
+    "picture",
+    "upload",
+    "easy"
+  ],
+  "author": "Yan Nunes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/midyan/math-solver-api/issues"
+  },
+  "homepage": "https://github.com/midyan/math-solver-api#readme"
+}
