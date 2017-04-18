@@ -43,26 +43,26 @@ const execTesseract = (options) => {
         (err, stderr, stdout) => {
           if (err) return callback(err)
           // console.log(err)
-          callback(null, tempFilePath, outPutFilePath, outPutFile, options)
+          callback(null, tempFilePath, outPutFile, options)
         }
       )
     },
-    (tempFilePath, outPutFilePath, outPutFile, options, callback) => { // 4
+    (tempFilePath, outPutFile, options, callback) => { // 4
       fs.readFile(outPutFile, (err, fileContent) => {
         if (err) return callback(err)
         // console.log(err)
-        callback(null, tempFilePath, outPutFilePath, options, fileContent)
+        callback(null, tempFilePath, outPutFile, options, fileContent)
       })
     },
-    (tempFilePath, outPutFilePath, options, fileContent, callback) => { // 5
+    (tempFilePath, outPutFile, options, fileContent, callback) => { // 5
       fs.unlink(tempFilePath, (err) => {
         if (err) return callback(err)
         // console.log(err)
-        callback(null, options, outPutFilePath, fileContent)
+        callback(null, options, outPutFile, fileContent)
       })
     },
-    (options, outPutFilePath, fileContent, callback) => { // 6
-      fs.unlink(outPutFilePath, (err) => {
+    (options, outPutFile, fileContent, callback) => { // 6
+      fs.unlink(outPutFile, (err) => {
         if (err) return callback(err)
         // console.log(err)
         callback(null, options, fileContent)
