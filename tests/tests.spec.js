@@ -1,5 +1,7 @@
 const chai = require('chai')
 const fs = require('fs')
+const path = require('path')
+const appDir = (path.resolve(__dirname) + '/').replace('tests/', '')
 const mainFile = require('../index.js')
 
 var expect = chai.expect
@@ -16,7 +18,7 @@ describe('Tesseract testing', () => {
     it('return image content from base64', function(done){
       this.timeout(20000)
       fs.readFile(
-        '/home/yannunes/projects/math-solver-api/texts/clean_photo_test.jpg',
+        appDir + '/texts/clean_photo_test.jpg',
         (err, result) => {
           if (err) {
             done(err)

@@ -1,9 +1,6 @@
-const Tesseract = require('tesseract.js')
 const q = require('q')
 const fs = require('fs')
-const math = require('mathjs')
 const exec = require('child_process').exec
-const _ = require('lodash')
 const path = require('path')
 const async = require('async')
 const appDir = path.resolve(__dirname) + '/'
@@ -27,28 +24,30 @@ const execTesseract = (options) => {
 
   var funcArray = [
     (callback) => { // 1 && 2
-      var timestamp = +new Date()
-      var tempFilePath = appDir + 'temp/' + timestamp + '.jpg'
-      var outPutFilePath = appDir + 'temp/' + timestamp + '_output'
+
+      const timestamp = +new Date()
+      const tempFilePath = appDir + 'temp/' + timestamp + '.jpg'
+      const outPutFilePath = appDir + 'temp/' + timestamp + '_output'
+      const outPutFile = outPutFilePath + '.txt'
+
       fs.writeFile(tempFilePath, options.data, 'base64', (err) => {
         // console.log(err)
         if (err) return callback(err)
-        callback(null, tempFilePath, outPutFilePath, options)
+        callback(null, tempFilePath, outPutFilePath, outPutFile, options)
       })
     },
-    (tempFilePath, outPutFilePath, options, callback) => { // 3
+    (tempFilePath, outPutFilePath, outPutFile, options, callback) => { // 3
       var command = 'tesseract ' + tempFilePath + ' -l ' + options.lang + ' ' + outPutFilePath
       exec(
         command,
         (err, stderr, stdout) => {
           if (err) return callback(err)
           // console.log(err)
-          callback(null, tempFilePath, outPutFilePath, options)
+          callback(null, tempFilePath, outPutFilePath, outPutFile, options)
         }
       )
     },
-    (tempFilePath, outPutFilePath, options, callback) => { // 4
-      outPutFilePath = outPutFilePath + '.txt'
+    (tempFilePath, outPutFilePath, outPutFile, options, callback) => { // 4
       fs.readFile(outPutFilePath, (err, fileContent) => {
         if (err) return callback(err)
         // console.log(err)
