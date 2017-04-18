@@ -48,7 +48,7 @@ const execTesseract = (options) => {
       )
     },
     (tempFilePath, outPutFilePath, outPutFile, options, callback) => { // 4
-      fs.readFile(outPutFilePath, (err, fileContent) => {
+      fs.readFile(outPutFile, (err, fileContent) => {
         if (err) return callback(err)
         // console.log(err)
         callback(null, tempFilePath, outPutFilePath, options, fileContent)
