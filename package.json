@@ -15,12 +15,14 @@
   },
   "keywords": [
     "math",
-    "wolfram",
+    "tesseract",
     "api",
     "solve",
     "picture",
     "upload",
-    "easy"
+    "easy",
+    "ocr",
+    "wrapper"
   ],
   "author": "Yan Nunes",
   "license": "MIT",
