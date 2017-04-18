@@ -3,7 +3,7 @@ const fs = require('fs')
 const exec = require('child_process').exec
 const path = require('path')
 const async = require('async')
-const appDir = path.resolve(__dirname) + '/'
+const appDir = process.env.PWD + '/'
 
 /**
  * Function to execute tesseract command with the right
