@@ -1,7 +1,7 @@
 {
-  "name": "math-solver-api",
+  "name": "tesseract-wrapper",
   "version": "1.0.0",
-  "description": "Upload a picture of a mathemetical equation. Get result as response. Magical!",
+  "description": "Upload a picture of a mathemetical simples equations (letter and numbers only). Get OCR result back.",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/midyan/math-solver-api.git"
+    "url": "git+https://github.com/midyan/tesseract-wrapper.git"
   },
   "keywords": [
     "math",
@@ -25,11 +25,20 @@
   "author": "Yan Nunes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/midyan/math-solver-api/issues"
+    "url": "https://github.com/midyan/tesseract-wrapper/issues"
   },
-  "homepage": "https://github.com/midyan/math-solver-api#readme",
+  "homepage": "https://github.com/midyan/tesseract-wrapper#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "async": "^2.3.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.4",
+    "mathjs": "^3.12.0",
+    "path": "^0.12.7",
+    "q": "^1.5.0",
+    "tesseract.js": "^1.0.10"
   }
 }
