@@ -13,29 +13,8 @@ addons:
       - g++-4.9
 
 
-#Installing hard dependencies: Tesseract and Leptonica
+#Installing tesseract
 before_install:
-  # - sudo apt-get install autoconf automake libtool -y
-  # - sudo apt-get install autoconf-archive -y
-  # - sudo apt-get install pkg-config -y
-  # - sudo apt-get install libpng12-dev -y
-  # - sudo apt-get install libjpeg8-dev -y
-  # - sudo apt-get install libtiff4-dev -y
-  # - sudo apt-get install zlib1g-dev -y
-  # - wget http://www.leptonica.org/source/leptonica-1.74.1.tar.gz
-  # - tar -xvf leptonica-1.74.1.tar.gz
-  # - cd leptonica-1.74.1
-  # - ./configure
-  # - make
-  # - sudo make install
-  # - cd ..
-  # - git clone --depth 1 https://github.com/tesseract-ocr/tesseract.git
-  # - cd tesseract
-  # - ./autogen.sh
-  # - ./configure --enable-debug
-  # - LDFLAGS="-L/usr/local/lib" CFLAGS="-I/usr/local/include" make
-  # - sudo make install
-  # - sudo ldconfig
   - sudo apt-get update -qq
   - sudo apt-get install -qq tesseract-ocr tesseract-ocr-nld
 
