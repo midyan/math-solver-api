@@ -4,6 +4,14 @@ node_js:
 
 #Installing hard dependencies: Tesseract and Leptonica
 before_install:
+  - sudo apt-get install g++
+  - sudo apt-get install autoconf automake libtool
+  - sudo apt-get install autoconf-archive
+  - sudo apt-get install pkg-config
+  - sudo apt-get install libpng12-dev
+  - sudo apt-get install libjpeg8-dev
+  - sudo apt-get install libtiff5-dev
+  - sudo apt-get install zlib1g-dev
   - wget http://www.leptonica.org/source/leptonica-1.74.1.tar.gz
   - tar -xvf leptonica-1.74.1.tar.gz
   - cd leptonica-1.74.1
