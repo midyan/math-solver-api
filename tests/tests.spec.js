@@ -20,9 +20,12 @@ describe('Tesseract testing', () => {
       fs.readFile(
         appDir + '/texts/clean_photo_test.jpg',
         (err, result) => {
+
           if (err) {
             done(err)
           } else {
+            console.log('Executing tesseract \n')
+            console.log(result)
             mainFile
               .execTesseract({
                 data: new Buffer(result).toString('base64'),

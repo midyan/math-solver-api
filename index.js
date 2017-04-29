@@ -24,7 +24,7 @@ const execTesseract = (options) => {
 
   var funcArray = [
     (callback) => { // 1 && 2
-
+      console.log('1 and 2')
       const timestamp = +new Date()
       const tempFilePath = appDir + 'temp/' + timestamp + '.jpg'
       const outPutFilePath = appDir + 'temp/' + timestamp + '_output'
@@ -37,6 +37,7 @@ const execTesseract = (options) => {
       })
     },
     (tempFilePath, outPutFilePath, outPutFile, options, callback) => { // 3
+      console.log(3)
       var command = 'tesseract ' + tempFilePath + ' -l ' + options.lang + ' ' + outPutFilePath
       exec(
         command,
@@ -48,6 +49,7 @@ const execTesseract = (options) => {
       )
     },
     (tempFilePath, outPutFile, options, callback) => { // 4
+      console.log(4)
       fs.readFile(outPutFile, (err, fileContent) => {
         if (err) return callback(err)
         // console.log(err)
@@ -55,7 +57,7 @@ const execTesseract = (options) => {
       })
     },
     (tempFilePath, outPutFile, options, fileContent, callback) => { // 5
-      conosole.log(5)
+      console.log(5)
       fs.unlink(tempFilePath, (err) => {
         if (err) return callback(err)
         // console.log(err)
@@ -63,6 +65,7 @@ const execTesseract = (options) => {
       })
     },
     (options, outPutFile, fileContent, callback) => { // 6
+      console.log(6)
       fs.unlink(outPutFile, (err) => {
         if (err) return callback(err)
         // console.log(err)
@@ -70,6 +73,7 @@ const execTesseract = (options) => {
       })
     },
     (options, fileContent, callback) => { // 7
+      console.log(7)
       var finalObj = {
         fileContent: fileContent.toString()
       }
