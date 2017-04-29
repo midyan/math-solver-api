@@ -26,9 +26,14 @@ const execTesseract = (options) => {
     (callback) => { // 1 && 2
       console.log('1 and 2')
       const timestamp = +new Date()
-      const tempFilePath = appDir + 'temp/' + timestamp + '.jpg'
-      const outPutFilePath = appDir + 'temp/' + timestamp + '_output'
+      const tempDir = appDir + 'temp/'
+      const tempFilePath = tempDir + timestamp + '.jpg'
+      const outPutFilePath = tempDir + timestamp + '_output'
       const outPutFile = outPutFilePath + '.txt'
+
+      if (!fs.existsSync(tempDir)){
+        fs.mkdirSync(tempDir);
+      }
 
       fs.writeFile(tempFilePath, options.data, 'base64', (err) => {
         // console.log(err)
