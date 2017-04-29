@@ -55,6 +55,7 @@ const execTesseract = (options) => {
       })
     },
     (tempFilePath, outPutFile, options, fileContent, callback) => { // 5
+      conosole.log(5)
       fs.unlink(tempFilePath, (err) => {
         if (err) return callback(err)
         // console.log(err)
