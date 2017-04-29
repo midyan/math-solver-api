@@ -20,7 +20,7 @@ before_install:
   - sudo ldconfig
 
 #Install dependencies script
-script: npm install
+before_script: npm install
 
 #Test script
 script: npm test
