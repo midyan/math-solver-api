@@ -9,7 +9,7 @@ before_install:
   - cd leptonica-1.74.1
   - ./configure
   - make
-  - make install
+  - sudo make install
   - cd ..
   - git clone --depth 1 https://github.com/tesseract-ocr/tesseract.git
   - cd tesseract
