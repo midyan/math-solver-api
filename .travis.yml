@@ -19,7 +19,7 @@ before_install:
   - sudo make install
   - sudo ldconfig
 
-#Install dependencies script
+#Install NPM dependencies
 before_script: npm install
 
 #Test script
