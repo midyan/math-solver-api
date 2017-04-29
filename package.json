@@ -1,6 +1,6 @@
 {
   "name": "tesseract-wrapper",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Upload a picture of a mathemetical simples equations (letter and numbers only). Get OCR result back.",
   "main": "index.js",
   "directories": {
