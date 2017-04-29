@@ -2,6 +2,23 @@ language: node_js
 node_js:
   - "7"
 
+#Installing hard dependencies: Tesseract and Leptonica
+before-install:
+  - wget http://www.leptonica.org/source/leptonica-1.74.1.tar.gz
+  - tar -xvf leptonica-1.74.1.tar.gz
+  - cd leptonica-1.74.1
+  - ./configure
+  - make
+  - make install
+  - cd ..
+  - git clone --depth 1 https://github.com/tesseract-ocr/tesseract.git
+  - cd tesseract
+  - ./autogen.sh
+  - ./configure --enable-debug
+  - LDFLAGS="-L/usr/local/lib" CFLAGS="-I/usr/local/include" make
+  - sudo make install
+  - sudo ldconfig
+
 #Install dependencies script
 script: npm install
 
