@@ -1,8 +1,7 @@
 # **tesseract-wrapper**
   Simple module for executing tesseract command to read a base64 image file.
 
-[![Build Status](https://travis-ci.org/midyan/tesseract-wrapper.svg?branch=master)](https://travis-ci.org/midyan/tesseract-wrapper)
-[![npm version](https://badge.fury.io/js/tesseract-wrapper.svg)](https://badge.fury.io/js/tesseract-wrapper)
+[![Build Status](https://travis-ci.org/midyan/tesseract-wrapper.svg?branch=master)](https://travis-ci.org/midyan/tesseract-wrapper) [![npm (scoped)](https://img.shields.io/npm/v/tesseract-wrapper.svg)](https://www.npmjs.com/package/tesseract-wrapper) [![npm](https://img.shields.io/npm/l/tesseract-wrapper.svg)](https://github.com/midyan/tesseract-wrapper/blob/master/LICENSE)
 
 # PLEASE NOTE
   This module is open for public usage, but I have developed it solely for creating an API endpoint on a private VPS. It has a hard dependency of [tesseract](https://github.com/tesseract-ocr). You need to have it compiled and its CLI working to use this module. Please read [this](https://github.com/tesseract-ocr/tesseract/wiki/Compiling).

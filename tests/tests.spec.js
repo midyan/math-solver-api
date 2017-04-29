@@ -23,7 +23,6 @@ describe('Tesseract testing', () => {
           if (err) {
             done(err)
           } else {
-            console.log('Executing tesseract \n')
             mainFile
               .execTesseract({
                 data: new Buffer(result).toString('base64'),
@@ -91,7 +90,6 @@ describe('Tesseract testing', () => {
           if (err) {
             done(err)
           } else {
-            console.log('Executing tesseract \n')
             mainFile
               .execTesseract({
                 data: new Buffer(result).toString('base64')
