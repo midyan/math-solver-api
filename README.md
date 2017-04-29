@@ -4,8 +4,7 @@
 [![Build Status](https://travis-ci.org/midyan/tesseract-wrapper.svg?branch=master)](https://travis-ci.org/midyan/tesseract-wrapper) [![npm (scoped)](https://img.shields.io/npm/v/tesseract-wrapper.svg)](https://www.npmjs.com/package/tesseract-wrapper) [![npm](https://img.shields.io/npm/l/tesseract-wrapper.svg)](https://github.com/midyan/tesseract-wrapper/blob/master/LICENSE)
 
 # PLEASE NOTE
-  This module is open for public usage, but I have developed it solely for creating an API endpoint on a private VPS. It has a hard dependency of [tesseract](https://github.com/tesseract-ocr). You need to have it compiled and its CLI working to use this module. Please read [this](https://github.com/tesseract-ocr/tesseract/wiki/Compiling).
-  This is why there is no TravisCI for the module for now, I plan creating a complex deployment later on. If you wanna help, I'd be more than glad to work with you.
+  This module is open for public usage, but I have developed it solely for creating an API endpoint on a private VPS. It has a hard dependency of [tesseract](https://github.com/tesseract-ocr). You need to have it compiled and its CLI working to use this module. Please read [this](https://github.com/tesseract-ocr/tesseract/wiki/Compiling) to help you compile from source or you could use [this](https://github.com/tesseract-ocr/tesseract/wiki) to try and install it via PPA.
 
 ## Installation and usage:
   ```
